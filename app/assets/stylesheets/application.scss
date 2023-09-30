@@ -1,0 +1,34 @@
+@import 'form';
+@import 'reset';
+
+body{
+    width: 414px;
+    height: 921px;
+    background: #ffffff;
+}
+
+.header{
+    color: #000000;
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 17px;
+}
+
+h2{
+    color: #000000;
+    font-family: Avenir;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin: 33px 0px;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+  }
