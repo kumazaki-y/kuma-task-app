@@ -4,7 +4,15 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :boards, dependent: :destroy
+  validates :title, presence: true
+  validates :content, presence: true
+  validates :deadline, presence: true
 
+  has_many :boards, dependent: :destroy
+  has_many :tasks, dependent: :destroy
+
+  def has_written?(board)
+    boards.exists?(id: board.id)
+  end
 
 end
