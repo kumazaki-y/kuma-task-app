@@ -1,0 +1,35 @@
+
+.board {
+    width: 362px;
+    height: 161px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #F4F4F4;
+    margin-top: 32px;
+    position: relative;
+
+  &_name {
+    color: #000;
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    top: 32px;
+    left: 17px;
+  }
+
+  &_description {
+    color: #000;
+    font-family: Avenir;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.4;
+    position: absolute;
+    top: 63px;
+    left: 17px;
+  }
+}

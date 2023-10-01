@@ -42,4 +42,13 @@ input{
     margin-top: 514px;
 }
 
+.description {
+    @extend input;
+    padding-bottom: 203px;
+    resize: none;
+  }
 
+.boards-btn{
+    @extend .btn;
+    margin-top: 341px;
+}

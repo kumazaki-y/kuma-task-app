@@ -1,0 +1,13 @@
+.container 
+  %h2 All Boards
+  - @boards.each do |board|
+    = link_to board_path(board) do
+      .board
+        .board_content
+          .board_name
+            = board.name
+          .board_description
+            = board.description
+  = link_to new_board_path do
+    .new_btn
+      %i.fa.fa-plus
