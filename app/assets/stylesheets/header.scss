@@ -10,32 +10,35 @@
     padding: 17px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 90%;
 
     &_loginBtn{
         border-radius: 8px;
         font-size: 12px;
     }
     &_avatar {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
         cursor: pointer;
+        position: relative; // dropdown-contentの絶対位置の基点となります
+ 
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          right: 0%; // 画像の右側に配置
+          top: 100%; // 画像のすぐ下に配置
+          background-color: rgb(255, 255, 255);
+          border: 1px solid #b9b9b9;
+          border-radius: 4px;
+          min-width: 100px;
+          z-index: 1; // 他の要素の上に表示
+        }
+        
+        &:hover .dropdown-content {
+          display: block;
+        }
     }
 }
 
-.dropdown {
-    position: relative; // dropdown-contentの絶対位置の基点となります
-  
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      right: 0%; // 画像の右側に配置
-      top: 100%; // 画像のすぐ下に配置
-      background-color: rgb(255, 255, 255);
-      border: 1px solid #b9b9b9;
-      border-radius: 4px;
-      min-width: 100px;
-      z-index: 1; // 他の要素の上に表示
-    }
-  
-    &:hover .dropdown-content {
-      display: block;
-    }
-  }
