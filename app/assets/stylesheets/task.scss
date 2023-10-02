@@ -1,0 +1,107 @@
+.task {
+    width: 362px;
+    height: 161px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #F4F4F4;
+    margin-top: 32px;
+    position: relative;
+    display: flex;
+
+  &_name {
+    color: #000;
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    top: 32px;
+    left: 17px;
+  }
+
+  &_description {
+    color: #000000;
+    font-family: Avenir;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.4;
+    position: absolute;
+    top: 63px;
+    left: 17px;
+  }
+
+  &_details{
+    width: 360px;
+    height: 170px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+
+    &_content{
+      width: 342px;
+      height: auto; 
+      flex-shrink: 0;
+      border-radius: 10px;
+      background: #F4F4F4;
+      margin-top: 33px;
+      padding: 10px;
+      
+      &_description{
+        width: 331px;
+        }
+    }
+  }
+
+  .task-dropbtn{
+    position: absolute;
+    top: 20px;
+    left: 150px;
+      
+    .task-dropbtn-content{
+      display: none;
+      position: absolute;
+      left: 130px;
+      top: 27px;
+      background-color: rgb(202, 61, 61);
+      border: none;
+      border-radius: 4px;
+      width: 66px;
+      height: 66px;
+      flex-shrink: 0;
+      z-index: 1; // 他の要素の上に表示
+    }
+  
+    &:hover .task-dropbtn-content {
+      display: flex;
+      flex-direction: column; /* 縦方向に要素を配置 */
+      justify-content: space-around; /* 要素間のスペースを等間隔に分配 */
+      align-items: center; /* 要素を横方向の中央に揃える */
+    }
+  }
+
+}
+
+.new_task{
+    width: 362px;
+    height: 160px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px dashed rgba(0, 0, 0, 0.20);
+    background: #FFF;
+    margin-top: 26px;
+
+    p{
+    color: #000;
+    text-align: center;
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 68px;
+    }
+}
+

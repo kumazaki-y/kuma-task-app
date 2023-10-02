@@ -1,0 +1,19 @@
+.container 
+  %h2= @task.name
+  - if user_signed_in? && current_user.has_written?(@board)
+    .task-dropbtn
+      = image_tag 'Combined Shape.png'
+      .task-dropbtn-content
+        = link_to "編集", edit_board_task_path(@board, @task)
+        = link_to "削除", board_task_path(@board, @task), method: :delete, data: { confirm: '本当に削除しますか？' }
+  .task_details
+    - if @task.eye_catch.present?
+      = image_tag @task.eye_catch, alt: "アイキャッチ画像"
+    - else
+      = image_tag 'default_image_path', alt: "デフォルト画像"
+    .task_details_content
+      .task_details_description
+        = @task.description
+-#   = link_to new_board_task_comment_path(@task) do
+-#     .new_comment
+-#       %p + Add new comment
