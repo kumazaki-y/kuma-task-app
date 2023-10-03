@@ -52,3 +52,7 @@ input{
     @extend .btn;
     margin-top: 341px;
 }
+
+.tasks-btn{
+    @extend .btn;
+}

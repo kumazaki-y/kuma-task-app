@@ -2,6 +2,7 @@
 @import 'reset';
 @import 'header';
 @import 'board';
+@import 'task';
 
 body{
     width: 414px;
@@ -17,6 +18,10 @@ h2{
     font-weight: 800;
     line-height: normal;
     margin: 33px 0px;
+    width: 300px; /* あなたの必要な幅に合わせてください */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .container {

@@ -1,0 +1,19 @@
+.container 
+  %h2 All tasks
+  - @tasks.each do |task|
+    = link_to task_path(task) do
+      .task
+        .task_content
+          .task_name
+            = task.name
+          .task_description
+            = task.description
+        - if user_signed_in? && current_user.has_written?(task)
+          .dropbtn
+            = image_tag 'Combined Shape.png', class: 'dropbtn'
+            .dropbtn-content
+              = link_to 'Edit', edit_task_path(task)
+              = link_to 'Delete', task_path(task), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
+  = link_to new_task_path do
+    .new_task
+      %p + Add new task

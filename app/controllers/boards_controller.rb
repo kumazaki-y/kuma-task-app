@@ -7,6 +7,8 @@ class BoardsController < ApplicationController
 
     def show
         @board = Board.find(params[:id])
+        puts @board.inspect  # これを追加
+        @tasks = @board.tasks
     end
 
     def new

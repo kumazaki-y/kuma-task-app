@@ -1,0 +1,135 @@
+.task {
+  width: 322px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #F4F4F4;
+  margin-top: 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px; 
+
+    .board-task-eye-catch {
+      width: 322px;
+      height: 170px;
+      object-fit: cover; // 画像のアスペクト比を保持しつつ、imgタグ等の要素を埋め尽くすように画像をリサイズ
+      object-position: center;
+
+      & img{
+        width: 100%;       // 画像の横幅を親要素の100%に設定
+        height: 100%;  
+      }
+
+    }
+    .task_content {
+      width: 100%;
+      position: relative;
+  }
+
+  &_name {
+    color: #000;
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    margin-top: 10px;
+  }
+
+  &_description {
+    color: #000000;
+    font-family: Avenir;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.4;
+    position: relative;
+    margin-top: 5px;
+  }
+
+  &_details{
+    width: 360px;
+    height: 170px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+    position: relative;
+
+      .task-eye-catch {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        display: block;
+        object-fit: cover; // 画像を親要素のサイズに合わせて切り取る
+        object-position: center; // 画像の中心を基準に表示
+      }
+
+    &_content{
+      width: 342px;
+      height: auto; 
+      flex-shrink: 0;
+      border-radius: 10px;
+      background: #F4F4F4;
+      margin-top: 33px;
+      padding: 10px;
+      
+      &_description{
+        width: 331px;
+        }
+    }
+  }
+
+  &-dropbtn{
+    position: absolute;
+    top: 120px;
+    left: 340px;
+      
+    &-content{
+      display: none;
+      position: absolute;
+      top: 100%;
+      background-color: rgb(214, 214, 214);
+      background: #FFF;
+      border: none;
+      border-radius: 4px;
+      width: 66px;
+      height: 66px;
+      flex-shrink: 0;
+      z-index: 1; // 他の要素の上に表示
+      padding-left: 1em;
+    }
+  
+    &:hover .task-dropbtn-content {
+      display: flex;
+      flex-direction: column; /* 縦方向に要素を配置 */
+      justify-content: space-around; /* 要素間のスペースを等間隔に分配 */
+      align-items:flex-start;
+    }
+  }
+
+}
+
+.new_task{
+    width: 362px;
+    height: 160px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px dashed rgba(0, 0, 0, 0.20);
+    background: #FFF;
+    margin-top: 26px;
+
+    p{
+    color: #000;
+    text-align: center;
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 68px;
+    }
+}
+
+
