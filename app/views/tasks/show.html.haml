@@ -4,11 +4,11 @@
     .task-dropbtn
       = image_tag 'Combined Shape.png'
       .task-dropbtn-content
-        = link_to "編集", edit_board_task_path(@board, @task)
-        = link_to "削除", board_task_path(@board, @task), method: :delete, data: { confirm: '本当に削除しますか？' }
+        = link_to "Edit", edit_board_task_path(@board, @task)
+        = link_to "Delete", board_task_path(@board, @task), method: :delete, data: { confirm: '本当に削除しますか？' }
   .task_details
     - if @task.eye_catch.present?
-      = image_tag @task.eye_catch, alt: "アイキャッチ画像"
+      = image_tag @task.eye_catch, alt: "アイキャッチ画像", class: 'task-eye-catch'
     - else
       = image_tag 'default_image_path', alt: "デフォルト画像"
     .task_details_content

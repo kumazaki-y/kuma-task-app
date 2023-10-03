@@ -2,14 +2,16 @@
   %ul
     - @task.errors.full_messages.each do |message|
       %li= message
-  = form_with(model: @task, local: true) do |f|
-    %h2 New task
-    %div
+  = form_with(model: [@board, @task], local: true) do |f|
+    = f.hidden_field :board_id, value: @board.id
+    %h2 Edit task
+    .field
       = f.label :Name, class: "label"
-    %div
       = f.text_field :name, class: 'text'
-    %div
+    .field
       = f.label :Description, class: "label"
-    %div
       = f.text_area :description, class: "description"
+    .field
+      = f.label :eye_catch, "アイキャッチ画像"
+      = f.file_field :eye_catch
     = f.submit 'Submit', class: 'tasks-btn'
