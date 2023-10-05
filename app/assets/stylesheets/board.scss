@@ -84,3 +84,33 @@
     }
 }
 
+.profile_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; // これにより、.profile_imagesと.comment_countが両端に配置されます
+
+  .profile_images {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: -15px; // 画像が重なるようになります
+    }
+  }
+
+  .comment_count {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-family: Avenir;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.2;
+
+    img {
+      margin-right: 5px; // アイコンとテキストのスペースを調整
+    }
+  }
+}

@@ -14,6 +14,19 @@
     .task_details_content
       .task_details_description
         = @task.description
--#   = link_to new_board_task_comment_path(@task) do
--#     .new_comment
--#       %p + Add new comment
+
+- if @task.comments.present?
+  %h3 Comment
+  - @task.comments.each do |comment|
+    .task_comment
+      .comment_content
+        - if comment.user.profile_image.present?
+          = image_tag comment.user.profile_image, alt: "User's profile image", class: "comment_image"
+        - else
+          = image_tag 'Oval.png', alt: "Default profile image", class: "comment_image"
+      .comment_text
+        = comment.content
+
+  = link_to new_board_task_comment_path(@board, @task) do
+    .new_comment
+      %p + Add new comment

@@ -1,0 +1,58 @@
+.new_comment{
+    width: 362px;
+    height: 57px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px dashed rgba(0, 0, 0, 0.20);
+    background: #FFF;
+    margin-top: 32px;
+    margin-left: 25px;
+
+    p{
+    color: #000;
+    text-align: center;
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 16px;
+    }
+}
+
+.task_comment {
+    margin-left: 30px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 340px;
+
+    .comment_image {
+        flex-shrink: 0;
+        margin-right: 10px;
+      }
+      .comment_text {
+        flex-grow: 1;         // 残りのスペースをテキストが埋める
+        color: #000;
+        font-family: Avenir;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+}
+
+h3{
+    color: #000;
+    font-family: Avenir;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 260px;
+    margin-left: 30px;
+}
+
