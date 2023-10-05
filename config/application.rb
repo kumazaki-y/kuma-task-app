@@ -11,7 +11,7 @@ module KumaTaskApp
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
-    if Rails.env.development? || Rails.env.test?
+    if Rails.env.development? || Rails.env.test? #開発・テスト環境だけで読み込むようにしないと、本番環境でエラーが起きる
       Bundler.require(*Rails.groups)
       Dotenv::Railtie.load
     end
