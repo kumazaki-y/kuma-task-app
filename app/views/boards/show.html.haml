@@ -10,6 +10,19 @@
             = truncate(task.name, length: 20) # 20文字まで表示
           .task_description
             = truncate(task.description, length: 50) # 50文字まで表示
+
+          .profile_section
+            .profile_images
+              = image_tag(task.user.profile_image.presence || 'Oval.png', alt: "Task's user profile image")
+              
+              - commented_users = task.comments.map(&:user).uniq
+              - commented_users.each do |user|
+                = image_tag(user.profile_image.presence || 'Oval.png', alt: "Commenter's profile image")
+
+            .comment_count
+              = task.comments.count
+              = image_tag 'icon.png', alt: "Comment icon"
+
   = link_to new_board_task_path(@board) do
     .new_task
       %p + Add new card
